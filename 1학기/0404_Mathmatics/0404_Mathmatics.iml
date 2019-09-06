@@ -6,7 +6,7 @@
     <content url="file://$MODULE_DIR$/../1학기/0404_Mathmatics">
       <sourceFolder url="file://$MODULE_DIR$/../1학기/0404_Mathmatics/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="JavaSE-1.8" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
