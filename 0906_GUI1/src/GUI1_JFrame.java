@@ -3,9 +3,13 @@ import javax.swing.*;
 public class GUI1_JFrame {
     public static void main(String[] args) {
         JFrame frame = new JFrame("창 이름");
+        JPanel panel = new JPanel();
         JLabel label = new JLabel("어쩌다 금요일 ㄱㅇㄷ");
-        //frame에 label을 붙임
-        frame.add(label);
+        JButton button = new JButton("오늘 회식감");
+
+        panel.add(label);
+        panel.add(button);
+        frame.add(panel);
 
         frame.pack();
         frame.setVisible(true);
