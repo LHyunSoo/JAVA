@@ -20,6 +20,7 @@ public class Sample {
         JTextField textField = new JTextField("JTextField");
         JTextArea textArea = new JTextArea(3,30);
         JComboBox comboBox = new JComboBox(jinwoo);
+        JLabel labelResult = new JLabel("Result");
 
         button.addActionListener(new ActionListener() {
             @Override
@@ -37,6 +38,8 @@ public class Sample {
         panel.add(textField);
         panel.add(textArea);
         panel.add(comboBox);
+        panel.add(labelResult);
+
         frame.add(panel);
 
         frame.setPreferredSize(new Dimension(600,400));
