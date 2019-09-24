@@ -22,10 +22,23 @@ public class Sample {
         JComboBox comboBox = new JComboBox(jinwoo);
         JLabel labelResult = new JLabel("Result");
 
+        //JButton을 누르면 실행
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button.setText("Clicked");
+                String result="";
+                result += label.getText();
+                result += button.getText();
+                result += checkBox.isSelected();
+                result += checkBox1.isSelected();
+                result += radioButton.isSelected();
+                result += radioButton1.isSelected();
+                result += textField.getText();
+                result += textArea.getText();
+                result += comboBox.getSelectedIndex();
+                result += comboBox.getSelectedItem();
+                //labelResult가 result로 바뀔 수 있게 set
+                labelResult.setText(result);
             }
         });
 
