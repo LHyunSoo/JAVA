@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class Sample {
     public static void main(String[] args) {
@@ -22,11 +21,35 @@ public class Sample {
         JComboBox comboBox = new JComboBox(jinwoo);
         JLabel labelResult = new JLabel("Result");
 
-        //JButton을 누르면 실행
+        //기본값(?) 지정
+        checkBox.setSelected(true);
+        radioButton.setSelected(true);
+        textField.setText("전화번호를 입력하세요.");
+
+        //textField를 클릭했을 때
+        textField.addFocusListener(new FocusListener() {    //관심받기
+            @Override
+            public void focusGained(FocusEvent e) {
+                if(textField.getText().equals("전화번호를 입력하세요.")){
+                    textField.setText("");
+                }
+            }
+
+            //다른 곳을 클릭했을 때
+            @Override
+            public void focusLost(FocusEvent e) {           //관심잃기
+                //textField가 비어있을 때
+                if(textField.getText().equals("")) {
+                    textField.setText("전화번호를 입력하세요.");
+                }
+            }
+        });
+
+        //button을 누르면 실행
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String result="";
+                String result = "";
                 result += label.getText();
                 result += button.getText();
                 result += checkBox.isSelected();
@@ -41,6 +64,29 @@ public class Sample {
                 labelResult.setText(result);
             }
         });
+
+        //Item이 눌리면 무조건 이곳으로 들어옴(Item에 따라 달리 실행)
+        ItemListener il = new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.getSource() == checkBox) {
+                    System.out.println("JCheckbox: " + checkBox.isSelected());
+                } else if (e.getSource() == checkBox1) {
+                    System.out.println("JCheckbox: " + checkBox1.isSelected());
+                } else if (e.getSource() == radioButton) {
+                    System.out.println("JCheckbox: " + radioButton.isSelected());
+                } else if (e.getSource() == radioButton1) {
+                    System.out.println("JCheckbox: " + radioButton1.isSelected());
+                } else if (e.getSource() == comboBox) {
+                    System.out.println("JCheckbox: " + comboBox.getSelectedItem());
+                }
+            }
+        };
+        checkBox.addItemListener(il);
+        checkBox1.addItemListener(il);
+        radioButton.addItemListener(il);
+        radioButton1.addItemListener(il);
+        comboBox.addItemListener(il);
 
         panel.add(label);
         panel.add(button);
