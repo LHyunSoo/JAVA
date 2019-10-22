@@ -13,8 +13,8 @@ public class SungDatasExam {
 			BufferedReader br = new BufferedReader(fr);
 			
 			//한줄 읽고, \t로 연결하기
-			String csvStr = "";	//모든 내용 \t로 연결한 String
-			String tmpStr = "";	//한줄 읽기용 임시 String
+			String csvStr = "";		//모든 내용 \t로 연결한 String
+			String tmpStr = "";		//한줄 읽기용 임시 String
 			while((tmpStr = br.readLine())!= null) {
 					csvStr += tmpStr + "\t";
 			}
