@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class GUI2_Components {
     public static void main(String[] args) {
         String[] jinwoo = {"이진우","해남이","콩알이","라이언","또치","어린왕자"};
+
         JFrame frame = new JFrame("Components");
         JPanel panel = new JPanel();
         JLabel label = new JLabel("JLable");
