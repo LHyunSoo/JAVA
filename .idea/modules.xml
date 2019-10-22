@@ -11,10 +11,11 @@
       <module fileurl="file://$PROJECT_DIR$/1학기/0410_io/0410_io.iml" filepath="$PROJECT_DIR$/1학기/0410_io/0410_io.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/0531_Exception/0531_Exception.iml" filepath="$PROJECT_DIR$/1학기/0531_Exception/0531_Exception.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/0612_Thread/0612_Thread.iml" filepath="$PROJECT_DIR$/1학기/0612_Thread/0612_Thread.iml" />
-      <module fileurl="file://$PROJECT_DIR$/0906_GUI1/0906_GUI1.iml" filepath="$PROJECT_DIR$/0906_GUI1/0906_GUI1.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/1학기.iml" filepath="$PROJECT_DIR$/1학기/1학기.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/2019First/2019First.iml" filepath="$PROJECT_DIR$/1학기/2019First/2019First.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2학기/2학기.iml" filepath="$PROJECT_DIR$/2학기/2학기.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/Class_Practice/Class_Practice.iml" filepath="$PROJECT_DIR$/1학기/Class_Practice/Class_Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2학기/GUII/GUI.iml" filepath="$PROJECT_DIR$/2학기/GUII/GUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/JAVA_0828/JAVA_0828.iml" filepath="$PROJECT_DIR$/1학기/JAVA_0828/JAVA_0828.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/JAVA_0830/JAVA_0830.iml" filepath="$PROJECT_DIR$/1학기/JAVA_0830/JAVA_0830.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/JAVA_0906/JAVA_0906.iml" filepath="$PROJECT_DIR$/1학기/JAVA_0906/JAVA_0906.iml" />
@@ -33,6 +34,7 @@
       <module fileurl="file://$PROJECT_DIR$/1학기/JAVA_1127/JAVA_1127.iml" filepath="$PROJECT_DIR$/1학기/JAVA_1127/JAVA_1127.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/JAVA_1129/JAVA_1129.iml" filepath="$PROJECT_DIR$/1학기/JAVA_1129/JAVA_1129.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/J_190115/J_190115.iml" filepath="$PROJECT_DIR$/1학기/J_190115/J_190115.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2학기/Test/Test.iml" filepath="$PROJECT_DIR$/2학기/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/1학기/a/a.iml" filepath="$PROJECT_DIR$/1학기/a/a.iml" />
     </modules>
   </component>
