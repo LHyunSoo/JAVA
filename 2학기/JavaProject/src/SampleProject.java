@@ -5,6 +5,7 @@ public class SampleProject {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Components");
         JPanel panel = new JPanel();
+        panel.setLayout(null);  //layout null
 
         frame.add(panel);
 
@@ -14,7 +15,7 @@ public class SampleProject {
         frame.setPreferredSize(new Dimension(1000,600));    //프레임 크기
         frame.setResizable(false);  //프레임 크기 조절 불가
 
-        panel.setBackground(Color.decode("#FBE9E7"));   //패널 배경색
+        panel.setBackground(Color.decode("#FBE9E7"));   //배경색
         frame.pack();
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

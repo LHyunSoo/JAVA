@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,29 +11,46 @@ public class Main {
         ImageIcon mainimg = new ImageIcon(Main.class.getResource("img/main.png"));
         ImageIcon mainimg_e = new ImageIcon(mainimg.getImage().getScaledInstance((int)((double)mainimg.getIconWidth()/2.5),(int)((double)mainimg.getIconHeight()/2.5),Image.SCALE_DEFAULT));
         JLabel mlbi = new JLabel(mainimg_e);
-        mlbi.setBounds(100,80,220,250);
+        mlbi.setBounds(100,80,220,250);     //레이블 위치
 
         JLabel title = new JLabel("모(毛)두(頭)의 헤어");
-        title.setFont(new Font("한컴 윤고딕 240",Font.BOLD,40));
-        title.setBounds(350,25,600,300);
+        title.setFont(new Font("한컴 윤고딕 240",Font.BOLD,40));    //font
+        title.setBounds(350,25,600,300);    //레이블 위치
+
         JLabel mean = new JLabel();
         mean.setText("<html> : 모발 모(毛)와 머리 두(頭)를 합쳐,<br>머리스타일을 모든 사람들에게 추천해 준다는 것을 의미</html>");
-        mean.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,22));
-        mean.setBounds(350,100,600,300);
+        mean.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,22));     //font
+        mean.setBounds(350,100,600,300);    //레이블 위치
 
         JButton recom = new JButton("<html><center>머리스타일<br>추천받기</center></html>");
-        recom.setFont(new Font("한컴 윤고딕 240",Font.BOLD,20));
-        recom.setBackground(Color.decode("#FFAB91"));
-        recom.setBounds(210,360,200,70);
-        JButton help = new JButton("프로그램 사용법");
-        help.setFont(new Font("한컴 윤고딕 240",Font.BOLD,20));
-        help.setBackground(Color.decode("#FFAB91"));
-        help.setBounds(580,360,200,70);
+        recom.setFont(new Font("한컴 윤고딕 240",Font.BOLD,20));     //font
+        recom.setCursor(new Cursor(Cursor.HAND_CURSOR));     //커서 바꾸기
+        recom.setBorderPainted(false);   //버튼 border 제거
+        recom.setBackground(Color.decode("#FFAB91"));    //버튼 색
+        recom.setBounds(210,380,200,70);    //버튼 위치
 
-        help.addActionListener(new ActionListener() {
+        recom.addActionListener(new ActionListener() {       //버튼눌렀을때
             @Override
             public void actionPerformed(ActionEvent e) {
-                //
+                Info f = new Info();
+                f.main(args);   //이동할 클래스의 메인 실행
+                frame.dispose();    //현재 창 닫기
+            }
+        });
+
+        JButton help = new JButton("프로그램 사용법");
+        help.setFont(new Font("한컴 윤고딕 240",Font.BOLD,20));     //font
+        help.setCursor(new Cursor(Cursor.HAND_CURSOR));     //커서 바꾸기
+        help.setBorderPainted(false);   //버튼 border 제거
+        help.setBackground(Color.decode("#FFAB91"));    //버튼 색
+        help.setBounds(580,380,200,70);     //버튼 위치
+
+        help.addActionListener(new ActionListener() {       //버튼눌렀을때
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Help h = new Help();
+                h.main(args);
+                frame.dispose();
             }
         });
 

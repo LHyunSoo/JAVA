@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Help {
     public static void main(String[] args) {
@@ -7,12 +9,30 @@ public class Help {
         JPanel panel = new JPanel();
         panel.setLayout(null);
 
+        ImageIcon homeimg = new ImageIcon(Main.class.getResource("img/home.png"));
+        ImageIcon homeimg_e = new ImageIcon(homeimg.getImage().getScaledInstance(homeimg.getIconWidth()/10,homeimg.getIconHeight()/10,Image.SCALE_DEFAULT));
+        JButton home = new JButton(homeimg_e);
+        home.setCursor(new Cursor(Cursor.HAND_CURSOR));     //커서 바꾸기
+        home.setBackground(Color.decode("#FBE9E7"));
+        home.setBorderPainted(false);   //버튼 border 제거
+        home.setBounds(50,40,50,50);
+
+        home.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main m = new Main();
+                m.main(args);
+                frame.dispose();
+            }
+        });
+
         JLabel title = new JLabel("<html>&nbsp;모두의 헤어 사용법</html>");
         title.setFont(new Font("한컴 윤고딕 240",Font.BOLD,48));
-        title.setOpaque(true);
+        title.setOpaque(true);  //배경색 지정하기 전 해야함
         title.setForeground(Color.WHITE);
-        title.setBackground(Color.decode("#FF7043"));
+        title.setBackground(Color.decode("#FFAB91"));
         title.setBounds(260,50,450,70);
+
         JLabel how = new JLabel("<html>&nbsp;&nbsp;1. \"머리스타일 추천받기\" 누르세요.<br>" +
                 "&nbsp;&nbsp;2. 이름을 입력하고 성별을 선택하세요.<br>" +
                 "&nbsp;&nbsp;3. 추천받고 싶은 방법을 선택하여 누르세요.<br>" +
@@ -30,6 +50,7 @@ public class Help {
         how.setBackground(Color.decode("#FFAB91"));
         how.setBounds(120,160,750,350);
 
+        panel.add(home);
         panel.add(title);
         panel.add(how);
         frame.add(panel);
