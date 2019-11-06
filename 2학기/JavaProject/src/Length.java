@@ -104,7 +104,11 @@ public class Length {
         next.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                tflength.getText();
+                double d = Double.parseDouble(tflength.getText());
 
+                ShortHair sh = new ShortHair(d);
+                sh.main(args);
                 frame.dispose();    //현재 창 닫기
             }
         });

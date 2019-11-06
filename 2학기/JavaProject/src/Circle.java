@@ -55,7 +55,7 @@ public class Circle {
             circleimg0 = new ImageIcon(Main.class.getResource("img/circle00.jpg"));
             circleimg0_e = new ImageIcon(circleimg0.getImage().getScaledInstance((int)(circleimg0.getIconWidth()/2),(int)(circleimg0.getIconHeight()/2),Image.SCALE_DEFAULT));
         }else{  //여자
-            circleimg0 = new ImageIcon(Main.class.getResource("img/circle0.jpg"));
+            circleimg0 = new ImageIcon(Main.class.getResource("img/circle0.png"));
             circleimg0_e = new ImageIcon(circleimg0.getImage().getScaledInstance((int)(circleimg0.getIconWidth()/3.5),(int)(circleimg0.getIconHeight()/3.5),Image.SCALE_DEFAULT));
         }
         JLabel lbcircle0 = new JLabel(circleimg0_e);
@@ -66,16 +66,23 @@ public class Circle {
         title.setBounds(340,-20,600,300);    //레이블 위치
 
         JLabel rec = new JLabel();
-        rec.setText("<html>- 시각적으로 갸름하게 보여주는 레이어드 C컬펌,<br>&nbsp;&nbsp;뿌리볼륨펌, 턱선까지 오거나 미디엄보다 긴 기장<br>" +
-                "- 가르마: 5:5 (세련되고 시크한 이미지를 부각)</html>");
+        if(mw==1) {  //남자
+            rec.setText("<html>- 정수리 볼륨을 살리고 이마를 드러내는 스타일</html>");
+        }else {
+            rec.setText("<html>- 시각적으로 갸름하게 보여주는 레이어드 C컬펌,<br>&nbsp;&nbsp;뿌리볼륨펌, 턱선까지 오거나 미디엄보다 긴 기장<br>" +
+                    "- 가르마: 5:5 (세련되고 시크한 이미지를 부각)</html>");
+        }
         rec.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,25));     //font
         rec.setBounds(340,55,600,300);    //레이블 위치
 
         JLabel warning = new JLabel();
-        warning.setText("* 피해야 할 스타일 : 미디엄 길이, 곱슬머리(파마)");
-        warning.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,23));
-        warning.setForeground(Color.RED);
-        warning.setBounds(340,115,600,300);    //레이블 위치
+        if(mw==1) {  //남자
+        }else { //여자
+            warning.setText("* 피해야 할 스타일 : 미디엄 길이, 곱슬머리(파마)");
+            warning.setFont(new Font("한컴 윤고딕 240", Font.PLAIN, 23));
+            warning.setForeground(Color.RED);
+            warning.setBounds(340, 115, 600, 300);    //레이블 위치
+        }
 
         ImageIcon circleimg1 = null;
         ImageIcon circleimg1_e = null;
@@ -84,7 +91,7 @@ public class Circle {
             circleimg1_e = new ImageIcon(circleimg1.getImage().getScaledInstance((int)(circleimg1.getIconWidth()/1.5),(int)(circleimg1.getIconHeight()/1.5),Image.SCALE_DEFAULT));
         }else{  //여자
             circleimg1 = new ImageIcon(Main.class.getResource("img/circle1.jpg"));
-            circleimg1_e = new ImageIcon(circleimg1.getImage().getScaledInstance((int)(circleimg1.getIconWidth()/1),(int)(circleimg1.getIconHeight()/1),Image.SCALE_DEFAULT));
+            circleimg1_e = new ImageIcon(circleimg1.getImage().getScaledInstance((int)(circleimg1.getIconWidth()/2.5),(int)(circleimg1.getIconHeight()/2.5),Image.SCALE_DEFAULT));
         }
         JLabel lbcircle1 = new JLabel(circleimg1_e);
         lbcircle1.setBounds(40,310,205,205);     //레이블 위치

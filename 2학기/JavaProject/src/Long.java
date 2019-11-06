@@ -66,16 +66,23 @@ public class Long {
         title.setBounds(340,-20,600,300);    //레이블 위치
 
         JLabel rec = new JLabel();
-        rec.setText("<html>- 볼륨감 있는 반 곱슬 느낌의 스타일이나<br>&nbsp;&nbsp;꽉찬 뱅 앞머리나 시스루 뱅으로 시선을 분산시키나<br>&nbsp;&nbsp;옆머리에 볼륨을 넣는 스타일<br>" +
-                "- 가르마: 8:2</html>");
+        if(mw==1) {  //남자
+            rec.setText("<html>- 앞머리를 살짝 내려 이마를 답답하지 않게<br>&nbsp;&nbsp;자연스럽게 가리는 스타일</html>");
+        }else {
+            rec.setText("<html>- 볼륨감 있는 반 곱슬 느낌의 스타일이나<br>&nbsp;&nbsp;꽉찬 뱅 앞머리나 시스루 뱅으로 시선을 분산시키나<br>&nbsp;&nbsp;옆머리에 볼륨을 넣는 스타일<br>" +
+                    "- 가르마: 8:2</html>");
+        }
         rec.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,25));     //font
         rec.setBounds(340,55,600,300);    //레이블 위치
 
         JLabel warning = new JLabel();
-        warning.setText("* 피해야 할 스타일 : 촥 달라 붙는 생머리");
-        warning.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,23));
-        warning.setForeground(Color.RED);
-        warning.setBounds(340,115,600,300);    //레이블 위치
+        if(mw==1) {  //남자
+        }else { //여자
+            warning.setText("* 피해야 할 스타일 : 촥 달라 붙는 생머리");
+            warning.setFont(new Font("한컴 윤고딕 240", Font.PLAIN, 23));
+            warning.setForeground(Color.RED);
+            warning.setBounds(340, 115, 600, 300);    //레이블 위치
+        }
 
         ImageIcon longimg1 = null;
         ImageIcon longimg1_e = null;

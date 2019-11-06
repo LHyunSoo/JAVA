@@ -65,16 +65,23 @@ public class Square {
         title.setBounds(340,-20,600,300);    //레이블 위치
 
         JLabel rec = new JLabel();
-        rec.setText("<html>- 단발 굵은 S컬펌, 미디엄 길이 레이어드 C컬펌과<br>&nbsp;&nbsp;애교머리에 자연스럽게 웨이브를 준 스타일<br>" +
-                "가르마: 7:3 이나 8:2 (청순하고 선한 이미지를 부각)</html>");
+        if(mw==1) {  //남자
+            rec.setText("<html>- 적당한 길이의 가벼운 컬로 얼굴 윤곽을 부드럽게 표현</html>");
+        }else {
+            rec.setText("<html>- 단발 굵은 S컬펌, 미디엄 길이 레이어드 C컬펌과<br>&nbsp;&nbsp;애교머리에 자연스럽게 웨이브를 준 스타일<br>" +
+                    "가르마: 7:3 이나 8:2 (청순하고 선한 이미지를 부각)</html>");
+        }
         rec.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,25));     //font
         rec.setBounds(340,55,600,300);    //레이블 위치
 
         JLabel warning = new JLabel();
-        warning.setText("* 피해야 할 스타일 : 5:5 정가르마, 반듯한 일자 앞머리");
-        warning.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,23));
-        warning.setForeground(Color.RED);
-        warning.setBounds(340,115,600,300);    //레이블 위치
+        if(mw==1) {  //남자
+        }else { //여자
+            warning.setText("* 피해야 할 스타일 : 5:5 정가르마, 반듯한 일자 앞머리");
+            warning.setFont(new Font("한컴 윤고딕 240", Font.PLAIN, 23));
+            warning.setForeground(Color.RED);
+            warning.setBounds(340, 115, 600, 300);    //레이블 위치
+        }
 
         ImageIcon squareimg1 = null;
         ImageIcon squareimg1_e = null;
@@ -107,7 +114,7 @@ public class Square {
             squareimg3_e = new ImageIcon(squareimg3.getImage().getScaledInstance((int)(squareimg3.getIconWidth()/3),(int)(squareimg3.getIconHeight()/3),Image.SCALE_DEFAULT));
         }else{  //여자
             squareimg3 = new ImageIcon(Main.class.getResource("img/square3.jpg"));
-            squareimg3_e = new ImageIcon(squareimg3.getImage().getScaledInstance((int)(squareimg3.getIconWidth()/3),(int)(squareimg3.getIconHeight()/3),Image.SCALE_DEFAULT));
+            squareimg3_e = new ImageIcon(squareimg3.getImage().getScaledInstance((int)(squareimg3.getIconWidth()/2.5),(int)(squareimg3.getIconHeight()/2.5),Image.SCALE_DEFAULT));
         }
         JLabel lbsquare3 = new JLabel(squareimg3_e);
         lbsquare3.setBounds(515,310,205,205);     //레이블 위치

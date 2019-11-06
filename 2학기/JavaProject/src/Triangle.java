@@ -65,16 +65,23 @@ public class Triangle {
         title.setBounds(340,-20,600,300);    //레이블 위치
 
         JLabel rec = new JLabel();
-        rec.setText("<html>- C컬펌 또는 무거운 느낌의 굵은 S컬펌과<br>&nbsp;&nbsp;머리를 한쪽으로 넘겨 웨이브를 준 스타일<br>" +
+        if(mw==1) {  //남자
+            rec.setText("<html>- 구렛나룻을 자연스럽게 살리며 너무 짧지 않고<br>&nbsp;&nbsp;자연스러운 스타일</html>");
+        }else {
+            rec.setText("<html>- C컬펌 또는 무거운 느낌의 굵은 S컬펌과<br>&nbsp;&nbsp;머리를 한쪽으로 넘겨 웨이브를 준 스타일<br>" +
                 "- 가르마: 1:9 (섹시하고 도회적인 이미지를 부각)</html>");
+        }
         rec.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,25));     //font
         rec.setBounds(340,55,600,300);    //레이블 위치
 
         JLabel warning = new JLabel();
-        warning.setText("* 피해야 할 스타일 : 답답해 보이는 앞머리");
-        warning.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,23));
-        warning.setForeground(Color.RED);
-        warning.setBounds(340,115,600,300);    //레이블 위치
+        if(mw==1) {  //남자
+        }else { //여자
+            warning.setText("* 피해야 할 스타일 : 답답해 보이는 앞머리");
+            warning.setFont(new Font("한컴 윤고딕 240", Font.PLAIN, 23));
+            warning.setForeground(Color.RED);
+            warning.setBounds(340, 115, 600, 300);    //레이블 위치
+        }
 
         ImageIcon triangleimg1 = null;
         ImageIcon triangleimg1_e = null;
