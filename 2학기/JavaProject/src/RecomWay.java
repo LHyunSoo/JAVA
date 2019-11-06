@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 public class RecomWay {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("머리스타일 추천 방법");
+        JFrame frame = new JFrame("헤어스타일 추천 방법");
         JPanel panel = new JPanel();
         panel.setLayout(null);  //layout null
 
@@ -33,7 +33,7 @@ public class RecomWay {
         home.setCursor(new Cursor(Cursor.HAND_CURSOR));     //커서 바꾸기
         home.setBackground(Color.decode("#FBE9E7"));
         home.setBorderPainted(false);   //버튼 border 제거
-        home.setBounds(50,40,50,50);
+        home.setBounds(105,40,50,50);
 
         home.addActionListener(new ActionListener() {
             @Override
@@ -61,19 +61,37 @@ public class RecomWay {
         JLabel length = new JLabel(lengthimg_e);
         length.setBounds(580,210,180,180);
 
-        JButton recomFaceshape = new JButton("얼굴형별 머리스타일");
+        JButton recomFaceshape = new JButton("얼굴형별 헤어스타일");
         recomFaceshape.setFont(new Font("한컴 윤고딕 240",Font.BOLD,20));     //font
         recomFaceshape.setCursor(new Cursor(Cursor.HAND_CURSOR));     //커서 바꾸기
         recomFaceshape.setBorder(new MatteBorder(3,3,3,3,(Color.decode("#FF8A65"))));   //버튼 border 굵기와 색 설정
         recomFaceshape.setBackground(Color.decode("#FBE9E7"));    //버튼 배경색
         recomFaceshape.setBounds(210,420,210,70);    //버튼 위치
 
-        JButton recomLength = new JButton("얼굴길이별 머리스타일");
+        recomFaceshape.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FaceShape fs = new FaceShape(0);
+                fs.main(args);
+                frame.dispose();
+            }
+        });
+
+        JButton recomLength = new JButton("얼굴길이별 헤어스타일");
         recomLength.setFont(new Font("한컴 윤고딕 240",Font.BOLD,20));     //font
         recomLength.setCursor(new Cursor(Cursor.HAND_CURSOR));     //커서 바꾸기
         recomLength.setBorder(new MatteBorder(3,3,3,3,(Color.decode("#FF8A65"))));   //버튼 border 굵기와 색 설정
         recomLength.setBackground(Color.decode("#FBE9E7"));    //버튼 배경색
         recomLength.setBounds(560,420,230,70);    //버튼 위치
+
+        recomLength.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Length l = new Length();
+                l.main(args);
+                frame.dispose();
+            }
+        });
 
         panel.add(back);
         panel.add(home);

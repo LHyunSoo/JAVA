@@ -33,22 +33,21 @@ public class Help {
         title.setBackground(Color.decode("#FFAB91"));
         title.setBounds(260,50,450,70);
 
-        JLabel how = new JLabel("<html>&nbsp;&nbsp;1. \"머리스타일 추천받기\" 누르세요.<br>" +
+        JLabel how = new JLabel("<html>&nbsp;&nbsp;1. \"헤어스타일 추천받기\" 누르세요.<br>" +
                 "&nbsp;&nbsp;2. 이름을 입력하고 성별을 선택하세요.<br>" +
                 "&nbsp;&nbsp;3. 추천받고 싶은 방법을 선택하여 누르세요.<br>" +
-                "&nbsp;&nbsp;4. \"얼굴형별 머리스타일\"을 선택한 경우<br>" +
-                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) 머리의 어느 부분을 추천받을지 선택하세요.<br>" +
-                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) 자신의 얼굴형을 선택하세요.<br>" +
-                "&nbsp;&nbsp;5. \"얼굴길이별 머리스타일\"을 선택한 경우<br>" +
+                "&nbsp;&nbsp;4. \"얼굴형별 헤어스타일\"을 선택한 경우<br>" +
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) 자신의 얼굴형을 선택하세요.<br>" +
+                "&nbsp;&nbsp;5. \"얼굴길이별 헤어스타일\"을 선택한 경우<br>" +
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) 귀 밑부터 턱끝 길이를 입력하세요.<br>" +
                 "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) 단발이 어울리는지 장발이 어울리는지 알려줍니다.<br>" +
-                "&nbsp;&nbsp;6. 자신의 얼굴형에 어울리는 머리스타일을 알려줍니다.<br>" +
+                "&nbsp;&nbsp;6. 자신이 선택한 항목에 어울리는 헤어스타일을 알려줍니다.<br>" +
                 "</html>");
         how.setFont(new Font("한컴 윤고딕 230",Font.PLAIN,30));
         how.setOpaque(true);
         how.setForeground(Color.WHITE);
         how.setBackground(Color.decode("#FFAB91"));
-        how.setBounds(120,160,750,350);
+        how.setBounds(100,160,800,350);
 
         panel.add(home);
         panel.add(title);

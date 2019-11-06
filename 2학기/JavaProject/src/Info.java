@@ -28,7 +28,7 @@ public class Info {
             }
         });
 
-        JLabel title = new JLabel("<html>정보를 입력해주세요!</html>");
+        JLabel title = new JLabel("정보를 입력해주세요!");
         title.setFont(new Font("한컴 윤고딕 240",Font.BOLD,40));
         title.setOpaque(true);  //배경색 지정하기 전 해야함
         title.setForeground(Color.WHITE);
@@ -65,7 +65,7 @@ public class Info {
 
         JLabel lbgender = new JLabel("성별");
         lbgender.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,30));
-        lbgender.setBounds(250,370,70,40);
+        lbgender.setBounds(250,350,70,40);
 
         JRadioButton rdw = new JRadioButton("<html>&nbsp;여자</html>");
         rdw.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,25));
@@ -75,13 +75,18 @@ public class Info {
         rdm.setOpaque(true);
         rdw.setBackground(Color.decode("#FBE9E7"));
         rdm.setBackground(Color.decode("#FBE9E7"));
-        rdw.setBounds(420,370,90,40);
-        rdm.setBounds(610,370,90,40);
+        rdw.setBounds(400,350,90,40);
+        rdm.setBounds(600,350,90,40);
 
         ButtonGroup buttonGroup = new ButtonGroup();
         buttonGroup.add(rdw);
         buttonGroup.add(rdm);
         rdw.setSelected(true);  //Default 선택 "여자"
+
+        JLabel caution = new JLabel("* 남자는 얼굴형별 헤어스타일만 추천해줍니다.");
+        caution.setFont(new Font("한컴 윤고딕 240",Font.PLAIN,20));
+        caution.setForeground(Color.RED);
+        caution.setBounds(400,400,400,30);
 
         JButton next = new JButton("다음");
         next.setFont(new Font("한컴 윤고딕 240",Font.BOLD,20));     //font
@@ -93,8 +98,13 @@ public class Info {
         next.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecomWay rw = new RecomWay();
-                rw.main(args);
+                if(rdw.isSelected()) {
+                    RecomWay rw = new RecomWay();
+                    rw.main(args);
+                }else if(rdm.isSelected()){
+                    FaceShape fs = new FaceShape(1);
+                    fs.main(args);
+                }
                 frame.dispose();    //현재 창 닫기
             }
         });
@@ -105,6 +115,7 @@ public class Info {
         panel.add(lbgender);
         panel.add(rdw);
         panel.add(rdm);
+        panel.add(caution);
         panel.add(next);
         panel.add(title);
         frame.add(panel);
